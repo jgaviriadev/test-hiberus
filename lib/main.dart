@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'core/routes/app_routes.dart';
 import 'core/themes/themes.dart';
@@ -20,6 +22,16 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: LightTheme.themeData(context),
           title: 'Test Hiberus',
+          localizationsDelegates: const [
+            AppLocalizations.delegate, 
+            GlobalMaterialLocalizations.delegate, 
+            GlobalCupertinoLocalizations.delegate, 
+            GlobalWidgetsLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('en', 'US'),
+            Locale('es', 'ES'),
+          ],
         );
       }
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../core/routes/resources.dart';
 import '../../../../core/themes/themes.dart';
@@ -9,6 +10,7 @@ class HomePage extends StatelessWidget {
   const HomePage({super.key});
   @override
   Widget build(BuildContext context) {
+    AppLocalizations l10n = AppLocalizations.of(context)!;
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColor.backgroundScaffold,
@@ -54,8 +56,13 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: AppSizes.paddingLarge),
-              const GeneralButton(
-                text: "Ver",
+              Text(
+                l10n.msgHome,
+                style: textBlackStyle14,
+              ),
+              const SizedBox(height: AppSizes.paddingSmall),
+              GeneralButton(
+                text: l10n.see,
               )
             ],
           ),
