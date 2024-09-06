@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/routes/resources.dart';
 import '../../../../core/themes/themes.dart';
 import '../widgets/widgets.dart';
+import 'cards_page.dart';
 
 class HomePage extends StatelessWidget {
   static const String routeName = 'home';
@@ -63,6 +65,7 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: AppSizes.paddingSmall),
               GeneralButton(
                 text: l10n.see,
+                onPressed: () => context.pushNamed(CardsPage.routeName),
               )
             ],
           ),
