@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 import 'core/routes/app_routes.dart';
+import 'core/themes/themes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +13,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: AppRouter.routes,
-      debugShowCheckedModeBanner: false,
-      title: 'Test Hiberus',
+    return ResponsiveSizer(
+      builder: (context, orientation, screenType) {
+        return MaterialApp.router(
+          routerConfig: AppRouter.routes,
+          debugShowCheckedModeBanner: false,
+          theme: LightTheme.themeData(context),
+          title: 'Test Hiberus',
+        );
+      }
     );
   }
 }
