@@ -40,7 +40,9 @@ class MTGApiClient {
         } else if (response.statusCode == 500) {
           throw ServerException(message: Constants.errorcodeServer);
         } else if (response.statusCode >= 400 && response.statusCode < 500) {
-          throw ServerException(message: response.body);
+          var errorResponse = jsonDecode(response.body);
+          String errorMessage = errorResponse['error'] ?? '';
+          throw ServerException(message: errorMessage);
         } else {
           throw ServerException(message: 'Unexpected error occurred: ${response.statusCode}');
         }
@@ -50,6 +52,9 @@ class MTGApiClient {
     } catch (e) {
       if (e is ConnectionException) {
         rethrow;
+      } else if (e is ServerException) {
+        // Print the specific error message
+        throw ServerException(message: e.message);
       } else {
         throw ServerException(message: 'An unexpected error occurred: $e');
       }
