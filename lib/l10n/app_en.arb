@@ -8,5 +8,9 @@
     "powerAndToughness" : "Power & Toughness",
     "artista" : "Artist",
     "details" : "Details",
-    "cards" : "Cards"
+    "cards" : "Cards",
+    "hello" : "Hello",
+    "serverError" : "The service is currently unavailable. Please try again later.",
+    "noInternet" : "No internet connection detected. Please check your connection and try again.",
+    "genericError" : "An unexpected error has occurred. Please try again later."
 }

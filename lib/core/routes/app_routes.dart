@@ -1,6 +1,5 @@
-
-// import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/home/domain/entities/card_entity.dart';
@@ -15,6 +14,7 @@ class AppRouter {
 
   static final GoRouter routes = GoRouter(
     initialLocation: "/splash",
+    navigatorKey: Get.key,
     debugLogDiagnostics: true,
     routes: <RouteBase>[
       GoRoute(

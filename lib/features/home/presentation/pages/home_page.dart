@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
+import 'package:test_hiberus_jg/core/utils/utils.dart';
 
 import '../../../../core/routes/resources.dart';
 import '../../../../core/themes/themes.dart';
+import '../../../../core/utils/notifications.dart';
 import '../../../../injection_container.dart';
 import '../bloc/home_bloc.dart';
 import '../widgets/widgets.dart';
@@ -33,7 +35,10 @@ class _HomePageState extends State<HomePage> {
             context.pushNamed(CardsPage.routeName, extra: state.cards,);
           }
           if(state is FailedGetMTGCardsState){
-
+            Notifications.showSnackBarError(
+              title: l10n.hello,
+              message: AppUtils.getMessageError(state.message, l10n),
+            );
           }
         },
         child: Stack(

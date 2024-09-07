@@ -40,3 +40,9 @@ TextStyle get textWhiteStyleBold16 => GoogleFonts.plusJakartaSans(
   fontSize: 16.sp,
 );
 
+TextStyle get textWhiteStyleBold14 => GoogleFonts.plusJakartaSans(
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+  fontSize: 14.sp,
+);
+

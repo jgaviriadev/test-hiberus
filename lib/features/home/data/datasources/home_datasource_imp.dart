@@ -12,21 +12,13 @@ class HomeDatasourceImpl implements HomeDatasource {
 
   @override
   Future<List<CardModel>> getMTGCards() async {
-    try {
-      final result = await apiClient.get(endpoint: "/cards");
-      if (result.statusCode == 200) {
-        var response = json.decode(result.body);
-        var cardsList = response['cards'] as List;
-        return cardsList.map((e) => CardModel.fromMap(e)).toList();
-      } else {
-        throw ServerException(message: 'Failed to load cards: ${result.statusCode}');
-      }
-    } catch (e) {
-      if (e is ServerException || e is ConnectionException) {
-        rethrow; // Rethrow the exception for the repository to handle
-      } else {
-        throw ServerException(message: 'An error has occurred: $e');
-      }
+    final result = await apiClient.get(endpoint: "/cards");
+    if (result.statusCode == 200) {
+      var response = json.decode(result.body);
+      var cardsList = response['cards'] as List;
+      return cardsList.map((e) => CardModel.fromMap(e)).toList();
+    } else {
+      throw ServerException(message: 'Failed to load cards: ${result.statusCode}');
     }
   }
 }

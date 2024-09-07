@@ -8,5 +8,9 @@
     "powerAndToughness" : "Poder y Resistencia",
     "artista" : "Artista",
     "details" : "Detalles",
-    "cards" : "Cartas"
+    "cards" : "Cartas",
+    "hello" : "Hola",
+    "serverError" : "El servicio no está disponible en este momento. Por favor, inténtalo de nuevo más tarde.",
+    "noInternet" : "No se detectó una conexión a internet. Verifica tu conexión y vuelve a intentarlo.",
+    "genericError" : "Ha ocurrido un error inesperado. Por favor, inténtalo de nuevo."
 }
