@@ -12,7 +12,7 @@ MTG Cards App is a mobile application built with Flutter that allows users to br
 ## Demo
 
 You can try out the demo of the MTG Cards App here:
-[MTG Cards Demo](https://your-demo-link.com) 
+[MTG Cards Demo](https://drive.google.com/file/d/1bFxRrQEl60O95pN2cprJWRJEABcXiTqj/view?usp=sharing) 
 
 
 ## Technologies Used
