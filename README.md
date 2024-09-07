@@ -1,16 +1,51 @@
-# test_hiberus_jg
+# MTG Cards App
 
-A new Flutter project.
+MTG Cards App is a mobile application built with Flutter that allows users to browse, search, and filter Magic: The Gathering cards using data from the Magic: The Gathering API. The app provides an intuitive interface for viewing card details and supports localization for different languages, including Spanish.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Search and browse Magic: The Gathering cards.
+- View detailed card information including card name, type, text, image, and flavor text.
+- Multilingual support (currently Spanish and English).
+- Handles different types of exceptions, including network and server errors.
 
-A few resources to get you started if this is your first Flutter project:
+## Demo
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+You can try out the demo of the MTG Cards App here:
+[MTG Cards Demo](https://your-demo-link.com) 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Technologies Used
+
+- Flutter
+- Dart
+- HTTP for API requests
+- Internet Connection Checker
+- Bloc
+- Get
+- Cached network image
+- Magic: The Gathering API
+
+## Requirements
+
+- Flutter SDK
+- Dart
+- Android Studio or Xcode for development and emulators
+- A real device or emulator with internet access
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/mtg-cards-app.git
+   cd mtg-cards-app
+
+2. Install dependencies:
+
+    flutter pub get
+
+3. Run the app on your emulator or connected device::
+
+    flutter run
+
