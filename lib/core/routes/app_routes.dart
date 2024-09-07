@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/home/domain/entities/card_entity.dart';
 import '../../features/home/presentation/pages/card_page.dart';
 import '../../features/home/presentation/pages/cards_page.dart';
 import '../../features/home/presentation/pages/home_page.dart';
@@ -35,14 +36,20 @@ class AppRouter {
             name: CardsPage.routeName,
             path: CardsPage.routeName,
             builder: (BuildContext context, GoRouterState state) {
-              return const CardsPage();
+              final cards = state.extra as List<CardEntity>;
+              return CardsPage(
+                cards: cards
+              );
             },
             routes: [
               GoRoute(
                 name: CardPage.routeName,
                 path: CardPage.routeName,
                 builder: (BuildContext context, GoRouterState state) {
-                  return const CardPage();
+                  final card = state.extra as CardEntity;
+                  return CardPage(
+                    card: card,
+                  );
                 },
               ),
             ]

@@ -22,9 +22,21 @@ TextStyle get textBlackStyle14 => GoogleFonts.plusJakartaSans(
   fontSize: 14.sp,
 );
 
+TextStyle get textBlackStyleBold14 => GoogleFonts.plusJakartaSans(
+  color: AppColor.black,
+  fontWeight: FontWeight.bold,
+  fontSize: 14.sp,
+);
+
 TextStyle get textWhiteStyle16 => GoogleFonts.plusJakartaSans(
   color: Colors.white,
   fontWeight: FontWeight.normal,
+  fontSize: 16.sp,
+);
+
+TextStyle get textWhiteStyleBold16 => GoogleFonts.plusJakartaSans(
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
   fontSize: 16.sp,
 );
 

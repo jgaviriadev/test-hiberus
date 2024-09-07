@@ -5,8 +5,11 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'core/routes/app_routes.dart';
 import 'core/themes/themes.dart';
+import 'injection_container.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await injectDependencies();
   runApp(const MyApp());
 }
 

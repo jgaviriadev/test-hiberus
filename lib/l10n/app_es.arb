@@ -1,4 +1,12 @@
 {
     "see" : "Ver",
-    "msgHome" : "Hola, esta es mi propuesta para el Test Técnico - Flutter."
+    "msgHome" : "Hola, esta es mi propuesta para el Test Técnico - Flutter.",
+    "manaCost" : "Costo de Mana",
+    "name" : "Nombre",
+    "type" : "Tipo",
+    "rarity" : "Rareza",
+    "powerAndToughness" : "Poder y Resistencia",
+    "artista" : "Artista",
+    "details" : "Detalles",
+    "cards" : "Cartas"
 }
