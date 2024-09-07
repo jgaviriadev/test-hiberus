@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                                       const SizedBox(height: AppSizes.paddingSmall),
                                       Text("gmjhonatan19@gmail.com", style: textBlackStyle14),
                                       const SizedBox(height: AppSizes.paddingSmall),
-                                      Text("05-09-2024", style: textBlackStyle14),
+                                      Text("07-09-2024", style: textBlackStyle14),
                                     ],
                                   ),
                                 ),

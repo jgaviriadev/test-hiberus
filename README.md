@@ -38,8 +38,7 @@ You can try out the demo of the MTG Cards App here:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/mtg-cards-app.git
-   cd mtg-cards-app
+   git clone https://github.com/jgaviriadev/test-hiberus.git
 
 2. Install dependencies:
 
