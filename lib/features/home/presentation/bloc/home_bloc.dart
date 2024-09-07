@@ -1,8 +1,10 @@
 
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/usecase/usecase.dart';
+import '../../../../core/utils/language.dart';
 import '../../domain/entities/entities.dart';
 import '../../domain/usecases/usecases.dart';
 
@@ -24,7 +26,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   Future<HomeState> _getMTGCards({required Emitter<HomeState> emit, required GetMTGCardsEvent event}) async {
     emit(const LoadingState(isLoading: true));
-    currentLang = event.lang;
+    Locale locale =  await getLocale();
+    currentLang = locale.languageCode;
     if(cards.isEmpty){
       //get cards from API
       final data = await getMTGCardsUseCase(NoParams());

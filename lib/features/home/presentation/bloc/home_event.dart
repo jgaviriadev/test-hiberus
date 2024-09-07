@@ -8,8 +8,7 @@ abstract class HomeEvent extends Equatable {
 }
 
 class GetMTGCardsEvent extends HomeEvent {
-  final String lang;
-  const GetMTGCardsEvent({required this.lang});
+  const GetMTGCardsEvent();
   @override
   List<Object> get props => [];
 }

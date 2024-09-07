@@ -9,6 +9,7 @@ import '../../../../core/themes/themes.dart';
 import '../../../../core/utils/notifications.dart';
 import '../../../../injection_container.dart';
 import '../bloc/home_bloc.dart';
+import '../widgets/drop_button_language.dart';
 import '../widgets/widgets.dart';
 import 'cards_page.dart';
 
@@ -49,41 +50,53 @@ class _HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: const EdgeInsets.all(AppSizes.paddingLarge),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Row(
-                        children: [
-                          Image.asset(
-                            avatarPNG,
-                            width: size.width * 0.36,
-                          ),
-                          const SizedBox(width: AppSizes.paddingSmall),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                      const Align(
+                        alignment: Alignment.topRight,
+                        child: DropButtonLanguage(
+                          items: ["en", "es"],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
                               children: [
-                                Text("Jhonatan Gaviria M.", style: textBlackStyleBold),
-                                const SizedBox(height: AppSizes.paddingSmall),
-                                Text("+57 314 219 6320", style: textBlackStyle14),
-                                const SizedBox(height: AppSizes.paddingSmall),
-                                Text("gmjhonatan19@gmail.com", style: textBlackStyle14),
-                                const SizedBox(height: AppSizes.paddingSmall),
-                                Text("05-09-2024", style: textBlackStyle14),
+                                Image.asset(
+                                  avatarPNG,
+                                  width: size.width * 0.36,
+                                ),
+                                const SizedBox(width: AppSizes.paddingSmall),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text("Jhonatan Gaviria M.", style: textBlackStyleBold),
+                                      const SizedBox(height: AppSizes.paddingSmall),
+                                      Text("+57 314 219 6320", style: textBlackStyle14),
+                                      const SizedBox(height: AppSizes.paddingSmall),
+                                      Text("gmjhonatan19@gmail.com", style: textBlackStyle14),
+                                      const SizedBox(height: AppSizes.paddingSmall),
+                                      Text("05-09-2024", style: textBlackStyle14),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: AppSizes.paddingLarge),
+                            Text(
+                              l10n.msgHome,
+                              style: textBlackStyle14,
+                            ),
+                            const SizedBox(height: AppSizes.paddingSmall),
+                            GeneralButton(
+                              text: l10n.see,
+                              onPressed: () => homeBloc.add(const GetMTGCardsEvent()),
+                            )
+                          ],
+                        ),
                       ),
-                      const SizedBox(height: AppSizes.paddingLarge),
-                      Text(
-                        l10n.msgHome,
-                        style: textBlackStyle14,
-                      ),
-                      const SizedBox(height: AppSizes.paddingSmall),
-                      GeneralButton(
-                        text: l10n.see,
-                        onPressed: () => homeBloc.add(const GetMTGCardsEvent(lang: "es")),
-                      )
                     ],
                   ),
                 ),
