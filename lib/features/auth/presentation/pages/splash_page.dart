@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sizer/sizer.dart';
 import 'package:test_hiberus_jg/core/themes/colors.dart';
 
 import '../../../../core/routes/resources.dart';
@@ -28,13 +29,12 @@ class _SplashPageState extends State<SplashPage> {
   
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColor.backgroundScaffold,
       body: Center(
         child: Image.asset(
           hiberusLogoPNG,
-          width: size.width * 0.5,
+          width: 50.w,
         ),
       ),
     );

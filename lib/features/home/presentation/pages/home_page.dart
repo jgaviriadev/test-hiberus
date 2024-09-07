@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sizer/sizer.dart';
 import 'package:test_hiberus_jg/core/utils/utils.dart';
 
 import '../../../../core/routes/resources.dart';
@@ -27,7 +28,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     AppLocalizations l10n = AppLocalizations.of(context)!;
-    final size = MediaQuery.of(context).size;
     return BlocProvider.value(
       value: homeBloc,
       child: BlocListener<HomeBloc, HomeState>(
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                               children: [
                                 Image.asset(
                                   avatarPNG,
-                                  width: size.width * 0.36,
+                                  width: 36.w,
                                 ),
                                 const SizedBox(width: AppSizes.paddingSmall),
                                 Expanded(
